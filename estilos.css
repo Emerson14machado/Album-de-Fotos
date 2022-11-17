@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:aquamarine;/*fundo da página*/
+    
+
+}
+
+.album {/*posição dos elementos na tela*/
+    
+    display: flex;/*como se fosse uma quebra de linha automatica*/
+    
+    flex-wrap: wrap; /* alinhagem*/
+   
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 2vw;
+}
+
+.fotos-album img {
+    width: 100%;/*largura*/
+    
+    height: 100%;/*altura*/
+    
+    object-fit: cover;/*forçar manter a proporção da imagem*/
+    
+}
+
+.fotos-album {
+    cursor: url(img/Lupa-clientes.cur), default; /*tipo de cursor do mouse*/
+    width: 340px;
+    height: 340px;
+    border: 10px solid #fff;
+    box-shadow: 5px 5px 5px black; /*desfoque/ sombra / cor */
+   
+    flex-grow: 1;/*ajustar o tamnho da imagem automaticamente*/
+    
+transition: transform .5s;/*velocidade da imagem*/
+filter:sepia(100%) hue-rotate(250deg) opacity(70%)/*blur(desfoque)*//*brightness(brilho)*/
+/*contrast(contraste)*//*grayscale(sem cor depois com cor)*/
+/*invert(efeito negativo)*//*opacity(tranparente)*//*saturate(n sei )*/
+ /*sepia( efeito de velho , antigo)*//*hue-rotate( mudar a cor )*/
+}
+
+
+.fotos-album:hover {
+    transform: scale(1.3);/*tamanho da imagem quando passar o mouse por cima*/
+    filter:opacity(100%)
+
+}
